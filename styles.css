@@ -1,0 +1,212 @@
+/* Fondo de la página completa con imagen */
+body {
+    position: relative;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+/* Efecto de superposición (Overlay) */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Estilo del contenido de la página */
+header, section {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #ffd700;
+}
+
+/* Estilo de texto */
+p {
+    font-size: 1.2em;
+    color: #ddd;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Contenedor del logo en la esquina superior derecha */
+.logo-container {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 3;
+}
+
+.logo-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Menú de navegación */
+#navbar {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    display: block;
+}
+
+#navbar ul li a:hover {
+    background-color: #ffd700;
+    border-radius: 5px;
+}
+
+/* Contenedor de la sección de histórico con imagen alineada a la derecha */
+#historico .content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#historico .text-container {
+    width: 60%;
+}
+
+#historico .image-container {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end; /* Esto asegura que la imagen se alinee a la derecha */
+}
+
+#historico .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Sección de funcionamiento con imagen alineada a la derecha */
+#funcionamiento .content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#funcionamiento .text-container {
+    width: 60%;
+}
+
+#funcionamiento .image-container {
+    width: 60%;
+    /* Removemos cualquier restricción de altura para que la imagen no se estire */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+#funcionamiento .image-container img {
+    width: auto;     /* Permite que la imagen mantenga su tamaño original */
+    max-width: 100%;  /* La imagen no sobrepasará el 100% de su contenedor */
+    height: auto;     /* Mantiene la proporción original de la imagen */
+    border-radius: 8px;
+}
+
+
+/* Estilos para pantallas grandes (computadora) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    /* Tamaño reducido del logo en pantallas pequeñas */
+    .logo-container img {
+        width: 60px;
+    }
+
+    /* Configuración en una sola columna para pantallas pequeñas */
+    #historico .content,
+    #funcionamiento .content {
+        flex-direction: column;
+    }
+
+    #historico .text-container,
+    #historico .image-container,
+    #funcionamiento .text-container,
+    #funcionamiento .image-container {
+        width: 100%;
+    }
+}
