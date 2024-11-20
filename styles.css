@@ -136,22 +136,7 @@ p {
 }
 
 #funcionamiento .text-container {
-    width: 60%;
-}
-
-#funcionamiento .image-container {
-    width: 60%;
-    /* Removemos cualquier restricción de altura para que la imagen no se estire */
-    display: flex;
-    justify-content: flex-end;
-    align-items: center; /* Centra la imagen verticalmente */
-}
-
-#funcionamiento .image-container img {
-    width: auto;     /* Permite que la imagen mantenga su tamaño original */
-    max-width: 100%;  /* La imagen no sobrepasará el 100% de su contenedor */
-    height: auto;     /* Mantiene la proporción original de la imagen */
-    border-radius: 8px;
+    width: 100%;
 }
 
 
@@ -209,4 +194,119 @@ p {
     #funcionamiento .image-container {
         width: 100%;
     }
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro con un poco de opacidad */
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 2px solid #ffd700; /* Línea superior dorada */
+}
+
+footer .credits p {
+    font-size: 1.1em;
+    color: #ccc; /* Texto gris claro */
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+footer .credits p span {
+    color: #ffd700; /* Destacar nombres en dorado */
+    font-weight: bold;
+}
+
+footer .divider {
+    height: 2px;
+    width: 80px;
+    background-color: #ffd700; /* Línea decorativa dorada */
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+/* Enlaces en el pie de página */
+footer a {
+    color: #ffd700; /* Enlaces en dorado */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff; /* Cambiar a blanco al pasar el cursor */
+}
+
+/* Sección de soporte en WhatsApp */
+#whatsapp-support {
+    text-align: center;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    color: #fff;
+    max-width: 600px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#whatsapp-support h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.whatsapp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.qr-code img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ffd700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-code img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
+}
+
+.whatsapp-button .button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #25D366, #1ebe57);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-button .button:hover {
+    background: linear-gradient(90deg, #1ebe57, #25D366);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.7);
+}
+
+/* Estilo para las imágenes adicionales al final */
+.image-grid {
+    display: flex;
+    justify-content: center;  /* Centra las imágenes horizontalmente */
+    align-items: center;      /* Centra las imágenes verticalmente */
+    gap: 20px;                /* Espacio entre las imágenes */
+    margin-top: 20px;
+    flex-wrap: wrap;          /* Permite que las imágenes se ajusten si el espacio es insuficiente */
+}
+
+.image-grid img {
+    width: 100%;  /* Las imágenes ocuparán un ancho igual en su contenedor */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
